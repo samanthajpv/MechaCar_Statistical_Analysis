@@ -77,14 +77,14 @@ The same applies to the computed p-values of manufacturing lots 1 & 2. The mean 
 
 Comparing the MechaCar's performance from vehicles produced by other manufacturers can be done through designing a statistical study using R. Below is a sample approach on how to conduct the study on selected metrics that consumers might want to consider when choosing to buy a vehicle. It is important to note that a few assumptions about the data, depending on the test chosen, must be met before applying any of the statistical analysis. Also, a significance level must be set.
 
-A. Multiple Linear Regression to Predict Price
+**A. Multiple Linear Regression to Predict Price**
 - *Metric to be Measured*: price of the car
 - *Hypothesis*
     - Ho: The slope of the linear model is equal to 0. This means that the dependent variable, price, does not have a linear relationship with the independent variables.
     - Ha: The slope of the linear model is not equal to 0.
 - Multiple linear regression was chosen to evaluate if the car price can be predicted by the independent variables. The data to be collected should be characteristics such as year, make, model, type, weight, engine size, count of cylinders, mpg, horsepower, and etc. Scatter plots can be added for visualization purposes.
 
-B. Combined MPG using Two-Way ANOVA
+**B. Combined MPG using Two-Way ANOVA**
 - *Metric to be Measured*: combined MPG (average city and highway mpg)
 - *Hypothesis*
     - Ho: 
@@ -95,15 +95,16 @@ B. Combined MPG using Two-Way ANOVA
         1. There is a difference in mean combined MPG for any transmission type.
         2. There is a difference in mean combined MPG for any vehicle class.
         3. There is an interaction effect between transmission type and vehicle class on mean combined MPG.
-- Two-way ANOVA was chosen since it is an easy way to analyze if the selected independent variables, transmission type and vehicle class, have an effect on the combined MPG. The data to be collected should be the combined MPG, transmission type, and vehicle class. A box-plot is a good option in visualizing this data.
+- Two-way ANOVA was chosen since it is an easy way to analyze if the selected independent variables, transmission type and vehicle class, affect the combined MPG. The data to be collected should be the combined MPG, transmission type, and vehicle class. A box-plot is a good option in visualizing this data.
 
-C. Safety Rating using One-Way ANOVA
+**C. Safety Rating using One-Way ANOVA**
 - *Metric to be Measured*: safety rating
 - *Hypothesis*
     - Ho: There is no difference in mean safety rating across vehicle brands.
     - Ha: There is a difference in mean safety rating across vehicle brands.
-- One-way ANOVA was chosen to analyze if the mean safety rating is equal for all vehicle brands since it is a straightforward approach. The data to be collected should be the safety rating and make/car brand. 
+- One-way ANOVA was chosen to analyze if the mean safety rating is equal for all vehicle brands since it is a straightforward approach. The data to be collected should be the safety rating and make/car brand. A bar plot is a simple yet informative way of plotting the mean safety rating of car brands.
 
 ## Reference
 (1) Trilogy Education Services. (2021, September). *Module 15 Challenge*. https://courses.bootcampspot.com/courses/626/assignments/13342?module_item_id=213533
+
 (2) Bevans, R.(2021, January). *An introduction to the two-way ANOVA*. Scribbr. https://www.scribbr.com/statistics/two-way-anova/
