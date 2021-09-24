@@ -95,14 +95,14 @@ Comparing the MechaCar's performance from vehicles produced by other manufacture
         1. There is a difference in mean combined MPG for any transmission type.
         2. There is a difference in mean combined MPG for any vehicle class.
         3. There is an interaction effect between transmission type and vehicle class on mean combined MPG.
-- Two-way ANOVA was chosen since it is an easy way to analyze if the selected independent variables, transmission type and vehicle class, affect the combined MPG. The data to be collected should be the combined MPG, transmission type, and vehicle class. A box-plot is a good option in visualizing this data.
+- Two-way ANOVA was chosen since it is an easy way to analyze if the selected independent variables, transmission type and vehicle class, affect the combined MPG. The data to be used should be the combined MPG, transmission type, and vehicle class. A box-plot is a good option in visualizing this data.
 
 **C. Safety Rating using One-Way ANOVA**
 - *Metric to be Measured*: safety rating
 - *Hypothesis*
     - Ho: There is no difference in mean safety rating across vehicle brands.
     - Ha: There is a difference in mean safety rating across vehicle brands.
-- One-way ANOVA was chosen to analyze if the mean safety rating is equal for all vehicle brands since it is a straightforward approach. The data to be collected should be the safety rating and make/car brand. A bar plot is a simple yet informative way of plotting the mean safety rating of car brands.
+- One-way ANOVA was chosen to analyze if the mean safety rating is equal for all vehicle brands since it is a straightforward approach. The data to be used should be the safety rating and make/car brand. Data should contain safety ratings from different years, models, car types, and etc. A bar plot is a simple yet informative way of plotting the mean safety rating of car brands.
 
 ## Reference
 (1) Trilogy Education Services. (2021, September). *Module 15 Challenge*. https://courses.bootcampspot.com/courses/626/assignments/13342?module_item_id=213533
