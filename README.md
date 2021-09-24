@@ -11,7 +11,7 @@ AutosRUs' newest prototype, the MechaCar, is currently facing problems. The purp
 - Language: R
     - Library: dyplr
 - Software: RStudio
-- [R Script](https://github.com/samanthajpv/MechaCar_Statistical_Analysis/blob/fde12d242dfd817293b621d9ea9b4c82635e9882/MechaCarChallenge.R)
+- [R Script](https://github.com/samanthajpv/MechaCar_Statistical_Analysis/blob/76bad133ec8869e10a117872b777f1ed794f97c8/MechaCarChallenge.R)
 
 ## Results
 
