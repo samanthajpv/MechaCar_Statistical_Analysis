@@ -9,6 +9,7 @@ AutosRUs' newest prototype, the MechaCar, is currently facing problems. The purp
     - [MechaCar_mpg.csv](https://github.com/samanthajpv/MechaCar_Statistical_Analysis/blob/fde12d242dfd817293b621d9ea9b4c82635e9882/MechaCar_mpg.csv)
     - [Suspension_Coil.csv](https://github.com/samanthajpv/MechaCar_Statistical_Analysis/blob/fde12d242dfd817293b621d9ea9b4c82635e9882/Suspension_Coil.csv)
 - Language: R
+    - Library: dyplr
 - Software: RStudio
 - [R Script](https://github.com/samanthajpv/MechaCar_Statistical_Analysis/blob/fde12d242dfd817293b621d9ea9b4c82635e9882/MechaCarChallenge.R)
 
@@ -44,7 +45,7 @@ In accordance with the Mechacar's design specifications for its suspension coils
 Although, when variance was computed for each manufacturing lot, Lot 3 shows that it does not meet the design specifications with a variance of 170.29. It is critical to drill down into the data specially if looking for elements that influence the variability. Lot 3 obviously has a big impact on the overall variance which the manufacturing team might want to further investigate.
 
 ### C. T-Tests on Suspension Coils
-T-Tests were performed on the suspension coil data to determine if there is a statistical difference across all manufacturing lots and each of the lots from the population mean of 1,500 PSI.
+T-Tests were performed on the suspension coil data to determine if there is a statistical difference across all manufacturing lots, and each of the lots, from the population mean of 1,500 PSI.
 >Ho (null hypothesis): The observed sample mean is equal to the population mean. <p></p>
 >Ha (alternative hypothesis): The observed sample mean is not equal to the population mean.
 
@@ -74,15 +75,35 @@ The same applies to the computed p-values of manufacturing lots 1 & 2. The mean 
 
 ### D. Study Design: MechaCar vs Competition
 
-Comparing the MechaCar's performance from vehicles produced by other manufacturers can be done through designing a statistical study using R. 
+Comparing the MechaCar's performance from vehicles produced by other manufacturers can be done through designing a statistical study using R. Below is a sample approach on how to conduct the study on selected metrics that consumers might want to consider when choosing to buy a vehicle. It is important to note that a few assumptions about the data, depending on the test chosen, must be met before applying any of the statistical analysis. Also, a significance level must be set.
 
-Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
-In your description, address the following questions:
+A. Multiple Linear Regression to Predict Price
+- *Metric to be Measured*: price of the car
+- *Hypothesis*
+    - Ho: The slope of the linear model is equal to 0. This means that the dependent variable, price, does not have a linear relationship with the independent variables.
+    - Ha: The slope of the linear model is not equal to 0.
+- Multiple linear regression was chosen to evaluate if the car price can be predicted by the independent variables. The data to be collected should be characteristics such as year, make, model, type, weight, engine size, count of cylinders, mpg, horsepower, and etc. Scatter plots can be added for visualization purposes.
 
-What metric or metrics are you going to test?
-What is the null hypothesis or alternative hypothesis?
-What statistical test would you use to test the hypothesis? And why?
-What data is needed to run the statistical test?
+B. Combined MPG using Two-Way ANOVA
+- *Metric to be Measured*: combined MPG (average city and highway mpg)
+- *Hypothesis*
+    - Ho: 
+        1. There is no difference in mean combined MPG for any transmission type.
+        2. There is no difference in mean combined MPG for any cylinder type.
+        3. The effect of one independent variable on the mean combined MPG does not depend on the effect of the other independent variable.
+    - Ha: 
+        1. There is a difference in mean combined MPG for any transmission type.
+        2. There is a difference in mean combined MPG for any vehicle class.
+        3. There is an interaction effect between transmission type and vehicle class on mean combined MPG.
+- Two-way ANOVA was chosen since it is an easy way to analyze if the selected independent variables, transmission type and vehicle class, have an effect on the combined MPG. The data to be collected should be the combined MPG, transmission type, and vehicle class. A box-plot is a good option in visualizing this data.
+
+C. Safety Rating using One-Way ANOVA
+- *Metric to be Measured*: safety rating
+- *Hypothesis*
+    - Ho: There is no difference in mean safety rating across vehicle brands.
+    - Ha: There is a difference in mean safety rating across vehicle brands.
+- One-way ANOVA was chosen to analyze if the mean safety rating is equal for all vehicle brands since it is a straightforward approach. The data to be collected should be the safety rating and make/car brand. 
 
 ## Reference
 (1) Trilogy Education Services. (2021, September). *Module 15 Challenge*. https://courses.bootcampspot.com/courses/626/assignments/13342?module_item_id=213533
+(2) Bevans, R.(2021, January). *An introduction to the two-way ANOVA*. Scribbr. https://www.scribbr.com/statistics/two-way-anova/
